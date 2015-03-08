@@ -6,7 +6,7 @@ library(xts)
 library(quantmod)
 
 ## Input
-setwd("~/Google Drive/Projects/portfoliotools/")
+# set working directory
 tsp <- read.csv("data/shareprices.csv",stringsAsFactors=FALSE)
 tsp$date <- as.Date(tsp$date,format="%m/%d/%y")
 tsp <- as.xts(tsp[,-1],order.by=tsp[,1])
